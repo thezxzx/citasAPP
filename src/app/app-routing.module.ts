@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'create-date',
+    loadChildren: () => import('./create-date/create-date.module').then( m => m.CreateDatePageModule)
   },
+
 ];
 
 @NgModule({

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "citasAPP",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
