@@ -6,6 +6,37 @@
 
 <ion-content>
 
-  form
+  <form (ngSubmit)="onAddDate()" [formGroup]="form">
+    <ion-item>
+      <ion-label position="floating">Nombre cliente:</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-datetime 
+        [min]="todayDate"
+        displayFormat="YYYY-MM-DD"
+        formControlName="date"
+      >
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hora</ion-label>
+      <ion-datetime
+        displayFormat="h:mm:a"
+        formControlName="time"
+      ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+    </ion-item>
+    
+    <ion-button (click)="onAddDate()">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+  </form>
 
 </ion-content>
